@@ -1,5 +1,8 @@
 'use strict'
 
+window.addEventListener('load', () => {
+
+
 // Eventos del ratón
 
 function cambiarColor(){
@@ -40,3 +43,28 @@ boton.addEventListener('mouseover', function(){
 boton.addEventListener('mouseout', function(){
     boton.style.background = "blue";
 })
+
+// Focus
+var input = document.querySelector('#campo_nombre')
+input.addEventListener('focus', function(){
+    console.log("Estás dentro del input")
+})
+
+// Blur
+input.addEventListener('blur', function(){
+    console.log("Estás fuera del input")
+})
+
+// Keydown
+input.addEventListener('keydown', function(event){
+    console.log("[keydown]Estás presionando la tecla:", String.fromCharCode(event.keyCode))
+})
+
+// Keypress
+input.addEventListener('keypress', function(event){
+    console.log("[keypress]Has presionado la tecla:", String.fromCharCode(event.keyCode))
+})
+
+}); 
+
+// Final del Load
